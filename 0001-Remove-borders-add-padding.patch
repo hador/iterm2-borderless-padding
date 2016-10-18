@@ -1,17 +1,29 @@
+From e1208b772490bdb7979dca06dcadb17daa6be9a5 Mon Sep 17 00:00:00 2001
+From: Andrea Fagiani <andfagiani@gmail.com>
+Date: Tue, 18 Oct 2016 09:33:52 +0200
+Subject: [PATCH] Remove borders and add horiz/vert padding
+
+---
+ sources/PseudoTerminal.m         | 3 +--
+ sources/iTermTextDrawingHelper.h | 4 ++--
+ 2 files changed, 3 insertions(+), 4 deletions(-)
+
 diff --git a/sources/PseudoTerminal.m b/sources/PseudoTerminal.m
-index f6868f3..99cded2 100644
+index b9f8920..2d567c1 100644
 --- a/sources/PseudoTerminal.m
 +++ b/sources/PseudoTerminal.m
-@@ -354,7 +354,6 @@ static NSString* TERMINAL_ARRANGEMENT_HIDING_TOOLBELT_SHOULD_RESIZE_WINDOW = @"H
+@@ -338,8 +338,7 @@ + (NSInteger)styleMaskForWindowType:(iTermWindowType)windowType {
+             return NSBorderlessWindowMask;
  
          default:
-             return (mask |
--                    NSTitledWindowMask |
-                     NSClosableWindowMask |
+-            return (NSTitledWindowMask |
+-                    NSClosableWindowMask |
++            return (NSClosableWindowMask |
                      NSMiniaturizableWindowMask |
                      NSResizableWindowMask |
+                     NSTexturedBackgroundWindowMask);
 diff --git a/sources/iTermTextDrawingHelper.h b/sources/iTermTextDrawingHelper.h
-index e6ab4c6..bde883d 100644
+index 0612aa8..339d7ec 100644
 --- a/sources/iTermTextDrawingHelper.h
 +++ b/sources/iTermTextDrawingHelper.h
 @@ -13,10 +13,10 @@
@@ -27,3 +39,6 @@ index e6ab4c6..bde883d 100644
  
  @class iTermColorMap;
  @class iTermFindOnPageHelper;
+-- 
+2.8.4 (Apple Git-73)
+
