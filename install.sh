@@ -24,7 +24,7 @@ sed -e "s/HORIZONTAL_VAR/${HORIZONTAL}/g" -e "s/VERTICAL_VAR/${VERTICAL}/g" 0001
 
 pushd iTerm2
 
-git checkout v3.0.10
+git checkout v3.0.14
 make clean
 git reset HEAD --hard
 git apply ../0001-Remove-borders-add-padding.tmp.patch

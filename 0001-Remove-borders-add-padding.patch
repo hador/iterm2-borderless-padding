@@ -8,20 +8,6 @@ Subject: [PATCH] Remove borders and add horiz/vert padding
  sources/iTermTextDrawingHelper.h | 4 ++--
  2 files changed, 3 insertions(+), 4 deletions(-)
 
-diff --git a/sources/PseudoTerminal.m b/sources/PseudoTerminal.m
-index b9f8920..2d567c1 100644
---- a/sources/PseudoTerminal.m
-+++ b/sources/PseudoTerminal.m
-@@ -338,8 +338,7 @@ + (NSInteger)styleMaskForWindowType:(iTermWindowType)windowType {
-             return NSBorderlessWindowMask;
- 
-         default:
--            return (NSTitledWindowMask |
--                    NSClosableWindowMask |
-+            return (NSClosableWindowMask |
-                     NSMiniaturizableWindowMask |
-                     NSResizableWindowMask |
-                     NSTexturedBackgroundWindowMask);
 diff --git a/sources/iTermTextDrawingHelper.h b/sources/iTermTextDrawingHelper.h
 index 0612aa8..339d7ec 100644
 --- a/sources/iTermTextDrawingHelper.h
